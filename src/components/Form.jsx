@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import FormStyles from "../styles/Form.module.css"
 import React from "react";
 
 const Form = ({setPreferenciasCulinarias}) => 
@@ -31,11 +32,11 @@ const Form = ({setPreferenciasCulinarias}) =>
       }
 
       return (
-            <div>
+            <div className={FormStyles.formContainer}>
                   <h2>
                         ¿Cual es tu comida favorita?
                   </h2>
-                  <form onSubmit={handleSubmit}>
+                  <form className={FormStyles.formElements} onSubmit={handleSubmit}>
                         <input type="text" placeholder="Ingresa tu nombre" onChange={ ({target}) => setDatos({ ...datos, nombre: target.value })}/>
                         <input type="text" placeholder="Ingresa tu comida favorita" onChange={ ({target}) => setDatos({ ...datos, comidaFavorita: target.value })}/>
                         <button>Enviar</button>

@@ -1,0 +1,17 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Chivo', sans-serif;
+}
+
+h1, h3, h2, h4 {
+      color: purple;
+}
+
+.appContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 20px;
+}

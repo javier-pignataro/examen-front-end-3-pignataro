@@ -1,0 +1,16 @@
+.formContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 20px;
+      background-color: pink;
+      border-radius: 12px;
+      width: 20vw;
+}
+
+.formElements {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+}
