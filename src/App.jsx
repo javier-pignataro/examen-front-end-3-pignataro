@@ -1,13 +1,23 @@
+import {useState} from 'react'
 import Card from "./components/Card";
+import Form from "./components/Form";
 
+function App() 
+{
+      const [preferenciasCulinarias, setPreferenciasCulinarias] = useState({
+            form: false,
+            datos: {}
+                  // nombre: "",
+                  // comidaFavorita: ""
+      })
 
-function App() {
       return (
-            <div className="App">
-                  <h1>Carga de estudiantes</h1>
-                  <form></form>
-                  <Card />
-            </div>
+            <>
+                  <div className="App">
+                        <Form setPreferenciasCulinarias={setPreferenciasCulinarias}/>
+                  </div>
+                  {preferenciasCulinarias.form && <Card preferenciasCulinarias={preferenciasCulinarias.datos}/>}
+            </>
       );
 }
 
